@@ -107,7 +107,8 @@ allprojects {
         compile "org.scala-lang:scala-compiler:${scala}"
         compile "com.typesafe.scala-logging:scala-logging_${scalaMajorVersion}:${scalaLoggingVersion}"
         compile "org.apache.kafka:connect-api:${kafkaVersion}"
-        compile "com.bettercloud:vault-java-driver:${vaultVersion}"
+        //compile "com.bettercloud:vault-java-driver:${vaultVersion}"
+        compile fileTree(dir: 'libs', include: '*.jar')
         compile "com.azure:azure-security-keyvault-secrets:${azureKeyVaultVersion}"
         compile "com.azure:azure-identity:${azureIdentityVersion}"
         compile "com.amazonaws:aws-java-sdk-secretsmanager:${awsSecretsVersion}"
